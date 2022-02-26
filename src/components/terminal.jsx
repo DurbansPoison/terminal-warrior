@@ -1,9 +1,6 @@
 import React from 'react';
-import Terminal from 'react-animated-term';
-import 'react-animated-term/dist/react-animated-term.css';
-
-
-
+import Terminal from 'react-animated-term'
+import 'react-animated-term/dist/react-animated-term.css'
 const spinner = ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏']
 const termLines = [
   {
@@ -27,21 +24,18 @@ const termLines = [
     text: '',
     cmd: true
   }
-];
-
-
-
-function TerminalComp ({
-    returns({
-        
-        <>
+]
+class TerminalComp extends React.Component {
+    render() {
+      return (
+          <>
         <Terminal
-        lines={termLines}
-        interval={80}
-         />
+          lines={termLines}
+          interval={80}
+        />
         </>
-    })
-});
-
-
-export default TerminalComp;
+      )
+    }
+  }
+  
+  export default TerminalComp;

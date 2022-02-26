@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import TerminalComp from './components/terminal/terminal.js';
+import TerminalComp from './components/terminal.jsx';
 function App() {
   const [count, setCount] = useState(0)
 
