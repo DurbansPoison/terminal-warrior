@@ -1,6 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import Terminal from "react-hackterm";
+import Terminal from "../../../react-term-nav-component";
 
 function TermComp() {
   return (
@@ -8,10 +7,10 @@ function TermComp() {
       <Terminal
         config={{
           mode: "root",
-          modeText: "example.com",
-          width: 500,
-          height: 300,
-          edge: true,
+          modeText: "Terminal-Warrior",
+          width: 800,
+          height: 200,
+          edge: false,
           font: "monospace",
           text: 14,
         }}
@@ -21,12 +20,17 @@ function TermComp() {
           {
             name: "whoami",
             description: "Get package name",
-            value: "react-hackterm",
+            value: "terminal-warrior: a react component for navigating an app type -h for all commands",
           },
           {
             name: "pwd",
             description: "Print working directory",
-            value: "/User/remote/guest/",
+            value: "/home/#",
+          },
+          {
+            name: "--help",
+            description: "a list of all commands available",
+            value: "whoami, pwd, --help, cd /home/page1, cd /home/page2"
           },
         ]}
       />
