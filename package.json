@@ -1,5 +1,5 @@
 {
-  "name": "my-vite-react",
+  "name": "react-term-nav",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -8,10 +8,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "apollo": "^2.33.9",
+    "nodemon": "^2.0.15",
     "react": "^17.0.2",
     "react-animated-term": "^2.0.0",
     "react-dom": "^17.0.2",
-    "react-hackterm": "^1.2.5"
+    "react-hackterm": "^1.2.5",
+    "react-router": "^6.2.2",
+    "redux": "^4.1.2"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",

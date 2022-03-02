@@ -38,7 +38,7 @@ function App() {
         </p>
       </header>
     </div>
-  )
+  ).if(err(console.log('err in app.jsx')))
 }
 
 export default App

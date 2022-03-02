@@ -6,7 +6,8 @@ function TermComp() {
     <div className="TermComp">
       <Terminal
         config={{
-          mode: "root",
+          mode: "custom",
+          bar: "macos",
           modeText: "Terminal-Warrior",
           width: 800,
           height: 200,
@@ -35,6 +36,6 @@ function TermComp() {
         ]}
       />
     </div>
-  )
+  ).if(err(console.log('term-nav-comp issue')))
 }
 export default TermComp;
