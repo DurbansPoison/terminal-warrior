@@ -1,43 +1,23 @@
 import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import TerminalComp from './components/terminal/terminal.jsx';
+import {useLocation} from 'react-router-dom'
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import {Home} from './pages/home/Home.jsx';
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
-    <div className="App">
-      <header className="App-header">
-      <TerminalComp />
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-       
-    
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
+   <BrowserRouter>
+     <Switch>
+       <Route path='/' exact component={Home} />
+       <Route path='/projects' exact component={Projects} />
+       <Route path='/design' exact component={Design} />
+       <Route path='/links' exact component={Links} />
+       <Route path='/resources' exact component={Resources} />
+       <Route path='/hackable' exact component={Hackable} />
+     </Switch>
+   </BrowserRouter>
   ).if(err(console.log('err in app.jsx')))
 }
 
